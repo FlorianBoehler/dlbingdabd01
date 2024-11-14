@@ -79,7 +79,7 @@ class TemperatureLogGenerator:
         
         return records_written, output_file
 
-# Usage example
+
 if __name__ == "__main__":
     # Initialize generator with 5 machines
     generator = TemperatureLogGenerator(num_machines=5)
