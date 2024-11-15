@@ -62,11 +62,12 @@ class TemperatureLogGenerator:
         
         with open(output_file, "w") as f:
             while time.time() - start_time < duration_seconds:
-                timestamp = datetime.datetime.now()
+                timestamp_plus_5min = datetime.datetime.now() + datetime.timedelta(minutes=5)
+                # timestamp = datetime.datetime.now()
                 
                 # Generate log entry for each machine
                 for machine in self.machines:
-                    log_entry = self.generate_log_entry(timestamp)
+                    log_entry = self.generate_log_entry(timestamp_plus_5min)
                     f.write(json.dumps(log_entry) + "\n")
                     records_written += 1
                 
@@ -84,7 +85,7 @@ if __name__ == "__main__":
     # Initialize generator with 5 machines
     generator = TemperatureLogGenerator(num_machines=5)
     
-    # Generate logs for 5 minutes with readings every second
+    # Generate logs for n seconds with readings every second
     records, logfile = generator.generate_logs(duration_seconds=300, interval_ms=1000)
     
     print(f"Generated {records} log entries in {logfile}")

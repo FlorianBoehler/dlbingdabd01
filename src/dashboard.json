@@ -1,0 +1,436 @@
+{
+    "visualizations": {
+        "viz_o6W8MP8W": {
+            "type": "splunk.line",
+            "dataSources": {
+                "primary": "ds_px4LR3Ee"
+            },
+            "title": "Temperature over time",
+            "options": {
+                "xAxisTitleText": "Time",
+                "yAxisMax": 100,
+                "yAxisMin": 50,
+                "yAxisLabelVisibility": "show",
+                "yAxisMajorTickSize": 5,
+                "y2AxisTitleVisibility": "hide",
+                "overlayFields": [],
+                "seriesColors": [
+                    "#294e70",
+                    "#009CEB",
+                    "#00CDAF",
+                    "#708794",
+                    "#b6c75a",
+                    "#dc4e41",
+                    "#f8be44",
+                    "#0051B5",
+                    "#008C80",
+                    "#99B100",
+                    "#FFA476",
+                    "#FF6ACE",
+                    "#AE8CFF",
+                    "#00689D",
+                    "#00490A",
+                    "#465D00",
+                    "#9D6300",
+                    "#F6540B",
+                    "#FF969E",
+                    "#E47BFE"
+                ]
+            }
+        },
+        "viz_FPaANr3T": {
+            "type": "splunk.singlevalue",
+            "dataSources": {
+                "primary": "ds_nb3uZ39b"
+            },
+            "title": "Current Temperature - Rotor_M1",
+            "containerOptions": {
+                "visibility": {}
+            },
+            "options": {
+                "unit": "°C",
+                "numberPrecision": 2,
+                "majorColor": "> majorValue | rangeValue(majorColorEditorConfig)",
+                "majorValue": "> sparklineValues | lastPoint()",
+                "trendValue": "> sparklineValues | delta(-2)",
+                "sparklineValues": "> primary | seriesByName('temp')",
+                "trendColor": "> trendValue | rangeValue(trendColorEditorConfig)"
+            },
+            "context": {
+                "majorColorEditorConfig": [
+                    {
+                        "value": "#118832",
+                        "to": 75
+                    },
+                    {
+                        "value": "#CBA700",
+                        "from": 75,
+                        "to": 85
+                    },
+                    {
+                        "value": "#D41F1F",
+                        "from": 85
+                    }
+                ],
+                "trendColorEditorConfig": [
+                    {
+                        "value": "#1C6B2D",
+                        "to": 0
+                    },
+                    {
+                        "value": "#9E2520",
+                        "from": 0
+                    }
+                ]
+            }
+        },
+        "viz_yZBaNQAY": {
+            "type": "splunk.singlevalue",
+            "dataSources": {
+                "primary": "ds_6ROPx3yv_ds_nb3uZ39b"
+            },
+            "title": "Current Temperature - Rotor_M2",
+            "containerOptions": {
+                "visibility": {}
+            },
+            "options": {
+                "unit": "°C",
+                "numberPrecision": 2,
+                "majorColor": "> majorValue | rangeValue(majorColorEditorConfig)",
+                "majorValue": "> sparklineValues | lastPoint()",
+                "trendValue": "> sparklineValues | delta(-2)",
+                "sparklineValues": "> primary | seriesByName('temp')",
+                "trendColor": "> trendValue | rangeValue(trendColorEditorConfig)"
+            },
+            "context": {
+                "majorColorEditorConfig": [
+                    {
+                        "value": "#118832",
+                        "to": 75
+                    },
+                    {
+                        "value": "#CBA700",
+                        "from": 75,
+                        "to": 85
+                    },
+                    {
+                        "value": "#D41F1F",
+                        "from": 85
+                    }
+                ],
+                "trendColorEditorConfig": [
+                    {
+                        "value": "#1C6B2D",
+                        "to": 0
+                    },
+                    {
+                        "value": "#9E2520",
+                        "from": 0
+                    }
+                ]
+            }
+        },
+        "viz_an46PJgI": {
+            "type": "splunk.singlevalue",
+            "dataSources": {
+                "primary": "ds_YpSY6KqJ_ds_nb3uZ39b"
+            },
+            "title": "Current Temperature - Rotor_M3",
+            "containerOptions": {
+                "visibility": {}
+            },
+            "options": {
+                "unit": "°C",
+                "numberPrecision": 2,
+                "majorColor": "> majorValue | rangeValue(majorColorEditorConfig)",
+                "majorValue": "> sparklineValues | lastPoint()",
+                "trendValue": "> sparklineValues | delta(-2)",
+                "sparklineValues": "> primary | seriesByName('temp')",
+                "trendColor": "> trendValue | rangeValue(trendColorEditorConfig)"
+            },
+            "context": {
+                "majorColorEditorConfig": [
+                    {
+                        "value": "#118832",
+                        "to": 75
+                    },
+                    {
+                        "value": "#CBA700",
+                        "from": 75,
+                        "to": 85
+                    },
+                    {
+                        "value": "#D41F1F",
+                        "from": 85
+                    }
+                ],
+                "trendColorEditorConfig": [
+                    {
+                        "value": "#1C6B2D",
+                        "to": 0
+                    },
+                    {
+                        "value": "#9E2520",
+                        "from": 0
+                    }
+                ]
+            }
+        },
+        "viz_rArUhatj": {
+            "type": "splunk.singlevalue",
+            "dataSources": {
+                "primary": "ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b"
+            },
+            "title": "Current Temperature - Rotor_M4",
+            "containerOptions": {
+                "visibility": {}
+            },
+            "options": {
+                "unit": "°C",
+                "numberPrecision": 2,
+                "majorColor": "> majorValue | rangeValue(majorColorEditorConfig)",
+                "majorValue": "> sparklineValues | lastPoint()",
+                "trendValue": "> sparklineValues | delta(-2)",
+                "sparklineValues": "> primary | seriesByName('temp')",
+                "trendColor": "> trendValue | rangeValue(trendColorEditorConfig)"
+            },
+            "context": {
+                "majorColorEditorConfig": [
+                    {
+                        "value": "#118832",
+                        "to": 75
+                    },
+                    {
+                        "value": "#CBA700",
+                        "from": 75,
+                        "to": 85
+                    },
+                    {
+                        "value": "#D41F1F",
+                        "from": 85
+                    }
+                ],
+                "trendColorEditorConfig": [
+                    {
+                        "value": "#1C6B2D",
+                        "to": 0
+                    },
+                    {
+                        "value": "#9E2520",
+                        "from": 0
+                    }
+                ]
+            }
+        },
+        "viz_UbbEGAzM": {
+            "type": "splunk.singlevalue",
+            "dataSources": {
+                "primary": "ds_dXcDLaxQ_ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b"
+            },
+            "title": "Current Temperature - Rotor_M5",
+            "containerOptions": {
+                "visibility": {}
+            },
+            "options": {
+                "unit": "°C",
+                "numberPrecision": 2,
+                "majorColor": "> majorValue | rangeValue(majorColorEditorConfig)",
+                "majorValue": "> sparklineValues | lastPoint()",
+                "trendValue": "> sparklineValues | delta(-2)",
+                "sparklineValues": "> primary | seriesByName('temp')",
+                "trendColor": "> trendValue | rangeValue(trendColorEditorConfig)"
+            },
+            "context": {
+                "majorColorEditorConfig": [
+                    {
+                        "value": "#118832",
+                        "to": 75
+                    },
+                    {
+                        "value": "#CBA700",
+                        "from": 75,
+                        "to": 85
+                    },
+                    {
+                        "value": "#D41F1F",
+                        "from": 85
+                    }
+                ],
+                "trendColorEditorConfig": [
+                    {
+                        "value": "#1C6B2D",
+                        "to": 0
+                    },
+                    {
+                        "value": "#9E2520",
+                        "from": 0
+                    }
+                ]
+            }
+        },
+        "viz_02xQpFJc": {
+            "type": "splunk.table",
+            "dataSources": {
+                "primary": "ds_jRjUEicz"
+            },
+            "title": "Warnings"
+        }
+    },
+    "dataSources": {
+        "ds_px4LR3Ee": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json \n| timechart span=1min avg(temperature) as \"Temperatur\" by machine useother=false\n| eval \"Critical\"=85\n| eval \"Warning\"=75"
+            },
+            "name": "All_Measurepoints"
+        },
+        "ds_nb3uZ39b": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json machine=\"ROTOR_M01\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+            },
+            "name": "Live_M1"
+        },
+        "ds_6ROPx3yv_ds_nb3uZ39b": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json machine=\"ROTOR_M02\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+            },
+            "name": "Live_M2"
+        },
+        "ds_YpSY6KqJ_ds_nb3uZ39b": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json machine=\"ROTOR_M03\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+            },
+            "name": "Live_M3"
+        },
+        "ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json machine=\"ROTOR_M04\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+            },
+            "name": "Live_M4"
+        },
+        "ds_dXcDLaxQ_ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json machine=\"ROTOR_M05\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+            },
+            "name": "Live_M5"
+        },
+        "ds_jRjUEicz": {
+            "type": "ds.search",
+            "options": {
+                "query": "sourcetype=_json \n| where temperature > 75\n| bin _time span=30s\n| table _time, machine, temperature \n| eval _time=strftime(_time, \"%Y-%m-%d %H:%M:%S\")\n| rename _time as \"Zeitpunkt\", machine as \"Messpunkt-ID\", temperature as \"Maximaltemperatur °C\""
+            },
+            "name": "Critical_Values"
+        }
+    },
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "latest": "$global_time.latest$",
+                        "earliest": "$global_time.earliest$"
+                    }
+                }
+            }
+        }
+    },
+    "inputs": {
+        "input_global_trp": {
+            "type": "input.timerange",
+            "options": {
+                "token": "global_time",
+                "defaultValue": "rt-1h,rt"
+            },
+            "title": "Global Time Range"
+        }
+    },
+    "layout": {
+        "type": "grid",
+        "options": {
+            "width": 1440,
+            "height": 960
+        },
+        "structure": [
+            {
+                "item": "viz_FPaANr3T",
+                "type": "block",
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 286,
+                    "h": 200
+                }
+            },
+            {
+                "item": "viz_o6W8MP8W",
+                "type": "block",
+                "position": {
+                    "x": 0,
+                    "y": 200,
+                    "w": 1440,
+                    "h": 488
+                }
+            },
+            {
+                "item": "viz_02xQpFJc",
+                "type": "block",
+                "position": {
+                    "x": 0,
+                    "y": 688,
+                    "w": 1440,
+                    "h": 400
+                }
+            },
+            {
+                "item": "viz_yZBaNQAY",
+                "type": "block",
+                "position": {
+                    "x": 286,
+                    "y": 0,
+                    "w": 312,
+                    "h": 200
+                }
+            },
+            {
+                "item": "viz_an46PJgI",
+                "type": "block",
+                "position": {
+                    "x": 598,
+                    "y": 0,
+                    "w": 291,
+                    "h": 200
+                }
+            },
+            {
+                "item": "viz_rArUhatj",
+                "type": "block",
+                "position": {
+                    "x": 889,
+                    "y": 0,
+                    "w": 283,
+                    "h": 200
+                }
+            },
+            {
+                "item": "viz_UbbEGAzM",
+                "type": "block",
+                "position": {
+                    "x": 1172,
+                    "y": 0,
+                    "w": 268,
+                    "h": 200
+                }
+            }
+        ],
+        "globalInputs": [
+            "input_global_trp"
+        ]
+    },
+    "description": "RotorWind GmbH",
+    "title": "DLBINGDABD01"
+}
