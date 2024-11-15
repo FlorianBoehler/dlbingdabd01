@@ -89,17 +89,40 @@ Real-time events include:
 - WARNING: 75-85°C
 - CRITICAL: >85°C
 
-## Splunk Query Examples
 
-Search for critical temperatures:
-```
-sourcetype=_json status="CRITICAL" | stats count by machine
+## Splunk Dashboard
+
+The project includes a pre-configured dashboard (`src/dashboard/temperature_dashboard.json`) with:
+
+### Visualizations
+- Real-time temperature display for each measurement point (ROTOR_M01 to ROTOR_M05)
+- Temperature trend line chart for all machines
+- Warning table for temperatures above 75°C
+
+### Color Coding
+- Green: Temperature ≤ 75°C
+- Yellow: Temperature 75-85°C
+- Red: Temperature > 85°C
+
+### Key Metrics
+```spl
+# All measurement points
+sourcetype=_json 
+| timechart span=1min avg(temperature) by machine
+
+# Critical values
+sourcetype=_json 
+| where temperature > 75
+| bin _time span=30s
+| table _time, machine, temperature
 ```
 
-Monitor temperature trends:
-```
-sourcetype=_json | timechart avg(temperature) by machine
-```
+### Dashboard Installation
+1. Navigate to Splunk > Dashboards
+2. Click "Create New Dashboard"
+3. Select "Source Editor"
+4. Copy and paste the contents of `temperature_dashboard.json`
+5. Save and view your dashboard
 
 ## Troubleshooting
 
