@@ -114,6 +114,6 @@ if __name__ == "__main__":
        splunk_port=8088,
        splunk_token=token_secret,
        min_temperature=60,
-       max_temperatur=80
+       max_temperatur=90
    )
    generator.generate_continuous_logs()
