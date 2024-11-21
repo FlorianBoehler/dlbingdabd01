@@ -8,46 +8,32 @@ urllib3.disable_warnings()
 import dotenv
 import os
 
-# Load environment variables from .env file
 dotenv.load_dotenv()
-
-# Get Splunk token from environment variables
 token_secret = os.getenv("SPLUNK_TOKEN")
 
 class TemperatureLogGenerator:
-    """
-    Generates and sends simulated temperature logs for multiple machines to Splunk.
-    Simulates realistic temperature fluctuations with momentum and randomization.
-    """
-    
     def __init__(self,
                  splunk_host="localhost",
                  splunk_port=8088,
                  splunk_token="SPLUNK_TOKEN_HERE",
-                 num_machines=5,
+                 num_points=5,
                  min_temperature=60,
-                 max_temperatur=80,
-                 locations=["Hall_A", "Hall_B", "Hall_C"]):
-        # Configure Splunk connection
+                 max_temperatur=95):
         self.splunk_url = f"http://{splunk_host}:{splunk_port}/services/collector"
         self.headers = {
             "Authorization": f"Splunk {splunk_token}",
             "Content-Type": "application/json"
         }
         
-        # Initialize machine configurations
-        self.num_machines = num_machines
-        self.locations = locations
-        self.machines = [f"ROTOR_M{str(i+1).zfill(2)}" for i in range(num_machines)]
+        self.num_points = num_points
+        self.measurement_points = [f"ROTOR_M{str(i+1).zfill(2)}" for i in range(num_points)]
         self.batch_counter = 1000
         
-        # Initialize temperature tracking for each machine
-        self.last_temperatures = {machine: 70.0 for machine in self.machines}
-        self.target_temps = {machine: random.uniform(min_temperature, max_temperatur) for machine in self.machines}
-        self.temp_momentum = {machine: 0.0 for machine in self.machines}
+        self.last_temperatures = {point: 70.0 for point in self.measurement_points}
+        self.target_temps = {point: random.uniform(min_temperature, max_temperatur) for point in self.measurement_points}
+        self.temp_momentum = {point: 0.0 for point in self.measurement_points}
         
     def get_status(self, temp):
-        """Determine machine status based on temperature thresholds."""
         if temp <= 75.0:
             return "NORMAL"
         elif temp <= 85.0:
@@ -55,38 +41,27 @@ class TemperatureLogGenerator:
         else:
             return "CRITICAL"
 
-    def generate_temperature(self, machine, max_change=0.5):
-        """
-        Generate next temperature value using physics-inspired simulation.
-        Includes momentum, damping, and random fluctuations.
-        """
-        last_temp = self.last_temperatures[machine]
-        target_temp = self.target_temps[machine]
+    def generate_temperature(self, point, max_change=0.5):
+        last_temp = self.last_temperatures[point]
+        target_temp = self.target_temps[point]
         
-        # Apply damping to reduce oscillations
         damping = 0.8
-        
-        # Calculate temperature change using momentum
         temp_diff = target_temp - last_temp
-        self.temp_momentum[machine] = (self.temp_momentum[machine] * damping + 
-                                     temp_diff * 0.1)
+        self.temp_momentum[point] = (self.temp_momentum[point] * damping + 
+                                   temp_diff * 0.1)
         
-        # Add random variations
         random_change = random.uniform(-max_change, max_change) * 0.3
-        change = self.temp_momentum[machine] + random_change
+        change = self.temp_momentum[point] + random_change
         
-        # 5% chance of temperature spike
         if random.random() < 0.05:
             change += random.uniform(1, 2)
             
-        # Apply changes and enforce temperature bounds
         new_temp = round(last_temp + change, 2)
-        new_temp = max(min(new_temp, 95.0), 65.0)
-        self.last_temperatures[machine] = new_temp
+        new_temp = max(min(new_temp, 95), 60.0)
+        self.last_temperatures[point] = new_temp
         return new_temp
 
     def send_to_splunk(self, event):
-        """Send event data to Splunk HEC endpoint."""
         data = {
             "event": event,
             "sourcetype": "_json",
@@ -108,24 +83,18 @@ class TemperatureLogGenerator:
             return False
 
     def generate_continuous_logs(self):
-        """
-        Main loop for generating and sending temperature logs.
-        Runs until interrupted with Ctrl+C.
-        """
         print("Starting data generation... (Press Ctrl+C to stop)")
         events_sent = 0
         try:
             while True:
                 current_time = datetime.datetime.now()
-                for machine in self.machines:
-                    # Generate and send log entry for each machine
-                    temperature = self.generate_temperature(machine)
+                for point in self.measurement_points:
+                    temperature = self.generate_temperature(point)
                     log_entry = {
                         "timestamp": current_time.strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3],
-                        "machine": machine,
+                        "measurement_point": point,
                         "temperature": temperature,
                         "status": self.get_status(temperature),
-                        "location": random.choice(self.locations),
                         "batch_id": f"BATCH_{self.batch_counter}"
                     }
                     if self.send_to_splunk(log_entry):
@@ -133,14 +102,12 @@ class TemperatureLogGenerator:
                     if events_sent % 50 == 0:
                         print(f"Successfully sent: {events_sent} events")
                         
-                # 1% chance to increment batch counter
                 if random.random() < 0.01:
                     self.batch_counter += 1
                 time.sleep(1)
         except KeyboardInterrupt:
             print(f"\nProgram ended. Total events sent: {events_sent}")
 
-# Example usage
 if __name__ == "__main__":
    generator = TemperatureLogGenerator(
        splunk_host="localhost",

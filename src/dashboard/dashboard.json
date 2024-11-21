@@ -15,26 +15,10 @@
                 "y2AxisTitleVisibility": "hide",
                 "overlayFields": [],
                 "seriesColors": [
-                    "#294e70",
-                    "#009CEB",
-                    "#00CDAF",
-                    "#708794",
-                    "#b6c75a",
-                    "#dc4e41",
-                    "#f8be44",
-                    "#0051B5",
-                    "#008C80",
-                    "#99B100",
-                    "#FFA476",
-                    "#FF6ACE",
-                    "#AE8CFF",
-                    "#00689D",
-                    "#00490A",
-                    "#465D00",
-                    "#9D6300",
-                    "#F6540B",
-                    "#FF969E",
-                    "#E47BFE"
+                    "#294e70", "#009CEB", "#00CDAF", "#708794", "#b6c75a",
+                    "#dc4e41", "#f8be44", "#0051B5", "#008C80", "#99B100",
+                    "#FFA476", "#FF6ACE", "#AE8CFF", "#00689D", "#00490A",
+                    "#465D00", "#9D6300", "#F6540B", "#FF969E", "#E47BFE"
                 ]
             }
         },
@@ -44,9 +28,6 @@
                 "primary": "ds_nb3uZ39b"
             },
             "title": "Current Temperature - Rotor_M1",
-            "containerOptions": {
-                "visibility": {}
-            },
             "options": {
                 "unit": "°C",
                 "numberPrecision": 2,
@@ -58,29 +39,13 @@
             },
             "context": {
                 "majorColorEditorConfig": [
-                    {
-                        "value": "#118832",
-                        "to": 75
-                    },
-                    {
-                        "value": "#CBA700",
-                        "from": 75,
-                        "to": 85
-                    },
-                    {
-                        "value": "#D41F1F",
-                        "from": 85
-                    }
+                    {"value": "#118832", "to": 75},
+                    {"value": "#CBA700", "from": 75, "to": 85},
+                    {"value": "#D41F1F", "from": 85}
                 ],
                 "trendColorEditorConfig": [
-                    {
-                        "value": "#1C6B2D",
-                        "to": 0
-                    },
-                    {
-                        "value": "#9E2520",
-                        "from": 0
-                    }
+                    {"value": "#1C6B2D", "to": 0},
+                    {"value": "#9E2520", "from": 0}
                 ]
             }
         },
@@ -90,9 +55,6 @@
                 "primary": "ds_6ROPx3yv_ds_nb3uZ39b"
             },
             "title": "Current Temperature - Rotor_M2",
-            "containerOptions": {
-                "visibility": {}
-            },
             "options": {
                 "unit": "°C",
                 "numberPrecision": 2,
@@ -104,29 +66,13 @@
             },
             "context": {
                 "majorColorEditorConfig": [
-                    {
-                        "value": "#118832",
-                        "to": 75
-                    },
-                    {
-                        "value": "#CBA700",
-                        "from": 75,
-                        "to": 85
-                    },
-                    {
-                        "value": "#D41F1F",
-                        "from": 85
-                    }
+                    {"value": "#118832", "to": 75},
+                    {"value": "#CBA700", "from": 75, "to": 85},
+                    {"value": "#D41F1F", "from": 85}
                 ],
                 "trendColorEditorConfig": [
-                    {
-                        "value": "#1C6B2D",
-                        "to": 0
-                    },
-                    {
-                        "value": "#9E2520",
-                        "from": 0
-                    }
+                    {"value": "#1C6B2D", "to": 0},
+                    {"value": "#9E2520", "from": 0}
                 ]
             }
         },
@@ -136,9 +82,6 @@
                 "primary": "ds_YpSY6KqJ_ds_nb3uZ39b"
             },
             "title": "Current Temperature - Rotor_M3",
-            "containerOptions": {
-                "visibility": {}
-            },
             "options": {
                 "unit": "°C",
                 "numberPrecision": 2,
@@ -150,29 +93,13 @@
             },
             "context": {
                 "majorColorEditorConfig": [
-                    {
-                        "value": "#118832",
-                        "to": 75
-                    },
-                    {
-                        "value": "#CBA700",
-                        "from": 75,
-                        "to": 85
-                    },
-                    {
-                        "value": "#D41F1F",
-                        "from": 85
-                    }
+                    {"value": "#118832", "to": 75},
+                    {"value": "#CBA700", "from": 75, "to": 85},
+                    {"value": "#D41F1F", "from": 85}
                 ],
                 "trendColorEditorConfig": [
-                    {
-                        "value": "#1C6B2D",
-                        "to": 0
-                    },
-                    {
-                        "value": "#9E2520",
-                        "from": 0
-                    }
+                    {"value": "#1C6B2D", "to": 0},
+                    {"value": "#9E2520", "from": 0}
                 ]
             }
         },
@@ -182,9 +109,6 @@
                 "primary": "ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b"
             },
             "title": "Current Temperature - Rotor_M4",
-            "containerOptions": {
-                "visibility": {}
-            },
             "options": {
                 "unit": "°C",
                 "numberPrecision": 2,
@@ -196,29 +120,13 @@
             },
             "context": {
                 "majorColorEditorConfig": [
-                    {
-                        "value": "#118832",
-                        "to": 75
-                    },
-                    {
-                        "value": "#CBA700",
-                        "from": 75,
-                        "to": 85
-                    },
-                    {
-                        "value": "#D41F1F",
-                        "from": 85
-                    }
+                    {"value": "#118832", "to": 75},
+                    {"value": "#CBA700", "from": 75, "to": 85},
+                    {"value": "#D41F1F", "from": 85}
                 ],
                 "trendColorEditorConfig": [
-                    {
-                        "value": "#1C6B2D",
-                        "to": 0
-                    },
-                    {
-                        "value": "#9E2520",
-                        "from": 0
-                    }
+                    {"value": "#1C6B2D", "to": 0},
+                    {"value": "#9E2520", "from": 0}
                 ]
             }
         },
@@ -228,9 +136,6 @@
                 "primary": "ds_dXcDLaxQ_ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b"
             },
             "title": "Current Temperature - Rotor_M5",
-            "containerOptions": {
-                "visibility": {}
-            },
             "options": {
                 "unit": "°C",
                 "numberPrecision": 2,
@@ -242,29 +147,13 @@
             },
             "context": {
                 "majorColorEditorConfig": [
-                    {
-                        "value": "#118832",
-                        "to": 75
-                    },
-                    {
-                        "value": "#CBA700",
-                        "from": 75,
-                        "to": 85
-                    },
-                    {
-                        "value": "#D41F1F",
-                        "from": 85
-                    }
+                    {"value": "#118832", "to": 75},
+                    {"value": "#CBA700", "from": 75, "to": 85},
+                    {"value": "#D41F1F", "from": 85}
                 ],
                 "trendColorEditorConfig": [
-                    {
-                        "value": "#1C6B2D",
-                        "to": 0
-                    },
-                    {
-                        "value": "#9E2520",
-                        "from": 0
-                    }
+                    {"value": "#1C6B2D", "to": 0},
+                    {"value": "#9E2520", "from": 0}
                 ]
             }
         },
@@ -280,49 +169,49 @@
         "ds_px4LR3Ee": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json \n| timechart span=1min avg(temperature) as \"Temperatur\" by machine useother=false\n| eval \"Critical\"=85\n| eval \"Warning\"=75"
+                "query": "sourcetype=_json \n| timechart span=1min avg(temperature) as \"Temperatur\" by measurement_point useother=false\n| eval \"Critical\"=85\n| eval \"Warning\"=75"
             },
             "name": "All_Measurepoints"
         },
         "ds_nb3uZ39b": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json machine=\"ROTOR_M01\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+                "query": "sourcetype=_json measurement_point=\"ROTOR_M01\"\n| stats latest(temperature) as temp by measurement_point \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields measurement_point, temp, color\n"
             },
             "name": "Live_M1"
         },
         "ds_6ROPx3yv_ds_nb3uZ39b": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json machine=\"ROTOR_M02\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+                "query": "sourcetype=_json measurement_point=\"ROTOR_M02\"\n| stats latest(temperature) as temp by measurement_point \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields measurement_point, temp, color\n"
             },
             "name": "Live_M2"
         },
         "ds_YpSY6KqJ_ds_nb3uZ39b": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json machine=\"ROTOR_M03\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+                "query": "sourcetype=_json measurement_point=\"ROTOR_M03\"\n| stats latest(temperature) as temp by measurement_point \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields measurement_point, temp, color\n"
             },
             "name": "Live_M3"
         },
         "ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json machine=\"ROTOR_M04\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+                "query": "sourcetype=_json measurement_point=\"ROTOR_M04\"\n| stats latest(temperature) as temp by measurement_point \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields measurement_point, temp, color\n"
             },
             "name": "Live_M4"
         },
         "ds_dXcDLaxQ_ds_QdGUStjd_ds_YpSY6KqJ_ds_nb3uZ39b": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json machine=\"ROTOR_M05\"\n| stats latest(temperature) as temp by machine \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields machine, temp, color\n"
+                "query": "sourcetype=_json measurement_point=\"ROTOR_M05\"\n| stats latest(temperature) as temp by measurement_point \n| eval color=case(\n    temp < 75, \"green\",\n    temp >= 75 AND temp <= 85, \"yellow\",\n    temp > 85, \"red\"\n) \n| fields measurement_point, temp, color\n"
             },
             "name": "Live_M5"
         },
         "ds_jRjUEicz": {
             "type": "ds.search",
             "options": {
-                "query": "sourcetype=_json \n| where temperature > 75\n| bin _time span=30s\n| table _time, machine, temperature \n| eval _time=strftime(_time, \"%Y-%m-%d %H:%M:%S\")\n| rename _time as \"Zeitpunkt\", machine as \"Messpunkt-ID\", temperature as \"Maximaltemperatur °C\""
+                "query": "sourcetype=_json \n| where temperature > 75\n| bin _time span=30s\n| table _time, measurement_point, temperature \n| eval _time=strftime(_time, \"%Y-%m-%d %H:%M:%S\")\n| rename _time as \"Zeitpunkt\", measurement_point as \"Messpunkt-ID\", temperature as \"Maximaltemperatur °C\""
             },
             "name": "Critical_Values"
         }
